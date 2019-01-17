@@ -459,6 +459,30 @@ def main():
                   },
                   port_range='-')
 
+    # test mysql-honeypotd
+    honeypot_test('mysqlhoneypotd',
+                  {
+                      direct_fingerprinting.DirectFingerprintTest(): TestResult.OK,
+                      direct_fingerprinting.DefaultServiceCombinationTest(): TestResult.OK,
+                      direct_fingerprinting.DuplicateServicesCheck(): TestResult.NOT_APPLICABLE
+                      default_ftp.DefaultFTPBannerTest(): TestResult.NOT_APPLICABLE,
+                      service_implementation.HTTPTest(): TestResult.NOT_APPLICABLE,
+                      default_http.DefaultWebsiteTest(): TestResult.NOT_APPLICABLE,
+                      default_http.DefaultGlastopfWebsiteTest(): TestResult.NOT_APPLICABLE,
+                      default_http.DefaultStylesheetTest(): TestResult.NOT_APPLICABLE,
+                      default_http.CertificateValidationTest(): TestResult.NOT_APPLICABLE,
+                      default_imap.DefaultIMAPBannerTest(): TestResult.NOT_APPLICABLE,
+                      default_smtp.DefaultSMTPBannerTest(): TestResult.NOT_APPLICABLE,
+                      service_implementation.SMTPTest(): TestResult.NOT_APPLICABLE,
+                      default_telnet.DefaultTelnetBannerTest(): TestResult.NOT_APPLICABLE,
+                      old_version_bugs.KippoErrorMessageBugTest(): TestResult.NOT_APPLICABLE,
+                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE,
+		      default_mysqlconnect.DefaultMysqlConnect(): TestResult.WARNING,
+                  })
+
+    
+
+
     # test the interface
     interface_test()
 
