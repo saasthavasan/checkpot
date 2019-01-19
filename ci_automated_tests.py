@@ -207,7 +207,9 @@ def main():
                       service_implementation.SMTPTest(): TestResult.OK,
                       default_telnet.DefaultTelnetBannerTest(): TestResult.UNKNOWN,
                       old_version_bugs.KippoErrorMessageBugTest(): TestResult.NOT_APPLICABLE,
-                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE
+                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE,
+                      default_mysqlconnect.DefaultMysqlConnect():TestResut.NOT_APPLICABLE
+
                   },
                   port_range='-')
 
@@ -228,7 +230,8 @@ def main():
                       service_implementation.SMTPTest(): TestResult.WARNING,
                       default_telnet.DefaultTelnetBannerTest(): TestResult.NOT_APPLICABLE,
                       old_version_bugs.KippoErrorMessageBugTest(): TestResult.WARNING,  # random reply
-                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE
+                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE,
+                      default_mysqlconnect.DefaultMysqlConnect():TestResut.NOT_APPLICABLE
                   },
                   port_range='-')
 
@@ -249,7 +252,8 @@ def main():
                       service_implementation.SMTPTest(): TestResult.NOT_APPLICABLE,
                       default_telnet.DefaultTelnetBannerTest(): TestResult.NOT_APPLICABLE,
                       old_version_bugs.KippoErrorMessageBugTest(): TestResult.NOT_APPLICABLE,
-                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE
+                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE,
+                      default_mysqlconnect.DefaultMysqlConnect():TestResut.NOT_APPLICABLE
                   })
 
     # test conpot
@@ -269,7 +273,8 @@ def main():
                       service_implementation.SMTPTest(): TestResult.NOT_APPLICABLE,
                       default_telnet.DefaultTelnetBannerTest(): TestResult.NOT_APPLICABLE,
                       old_version_bugs.KippoErrorMessageBugTest(): TestResult.NOT_APPLICABLE,
-                      default_templates.DefaultTemplateFileTest(): TestResult.WARNING
+                      default_templates.DefaultTemplateFileTest(): TestResult.WARNING,
+                      default_mysqlconnect.DefaultMysqlConnect():TestResut.NOT_APPLICABLE
                   },
                   port_range='0-501,503-1000')
 
@@ -290,7 +295,8 @@ def main():
                       service_implementation.SMTPTest(): TestResult.NOT_APPLICABLE,
                       default_telnet.DefaultTelnetBannerTest(): TestResult.WARNING,
                       old_version_bugs.KippoErrorMessageBugTest(): TestResult.OK,
-                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE
+                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE,
+                      default_mysqlconnect.DefaultMysqlConnect():TestResut.NOT_APPLICABLE
                   },
                   port_range='-')
 
@@ -311,7 +317,8 @@ def main():
                       service_implementation.SMTPTest(): TestResult.NOT_APPLICABLE,
                       default_telnet.DefaultTelnetBannerTest(): TestResult.NOT_APPLICABLE,
                       old_version_bugs.KippoErrorMessageBugTest(): TestResult.NOT_APPLICABLE,
-                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE
+                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE,
+                      default_mysqlconnect.DefaultMysqlConnect():TestResut.NOT_APPLICABLE
                   },
                   port_range='-')
 
@@ -332,7 +339,8 @@ def main():
                       service_implementation.SMTPTest(): TestResult.NOT_APPLICABLE,
                       default_telnet.DefaultTelnetBannerTest(): TestResult.NOT_APPLICABLE,
                       old_version_bugs.KippoErrorMessageBugTest(): TestResult.NOT_APPLICABLE,
-                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE
+                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE,
+                      default_mysqlconnect.DefaultMysqlConnect():TestResut.NOT_APPLICABLE
                   })
 
     # test honeypy
@@ -352,7 +360,8 @@ def main():
                       service_implementation.SMTPTest(): TestResult.NOT_APPLICABLE,
                       default_telnet.DefaultTelnetBannerTest(): TestResult.WARNING,
                       old_version_bugs.KippoErrorMessageBugTest(): TestResult.NOT_APPLICABLE,
-                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE
+                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE,
+                      default_mysqlconnect.DefaultMysqlConnect():TestResut.NOT_APPLICABLE
                   },
                   port_range='-')
 
@@ -373,7 +382,8 @@ def main():
                       service_implementation.SMTPTest(): TestResult.NOT_APPLICABLE,
                       default_telnet.DefaultTelnetBannerTest(): TestResult.NOT_APPLICABLE,
                       old_version_bugs.KippoErrorMessageBugTest(): TestResult.NOT_APPLICABLE,
-                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE
+                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE,
+                      default_mysqlconnect.DefaultMysqlConnect():TestResut.NOT_APPLICABLE
                   })
 
     # test honeytrap
@@ -393,7 +403,8 @@ def main():
                       service_implementation.SMTPTest(): TestResult.NOT_APPLICABLE,
                       default_telnet.DefaultTelnetBannerTest(): TestResult.NOT_APPLICABLE,
                       old_version_bugs.KippoErrorMessageBugTest(): TestResult.UNKNOWN,
-                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE
+                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE,
+                      default_mysqlconnect.DefaultMysqlConnect():TestResut.NOT_APPLICABLE
                   },
                   port_range='-')
 
@@ -414,9 +425,11 @@ def main():
                     service_implementation.SMTPTest(): TestResult.NOT_APPLICABLE,
                     default_telnet.DefaultTelnetBannerTest(): TestResult.NOT_APPLICABLE,
                     old_version_bugs.KippoErrorMessageBugTest(): TestResult.OK,
-                    default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE
+                    default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE,
+                    default_mysqlconnect.DefaultMysqlConnect():TestResut.NOT_APPLICABLE
                   },
                   port_range='-')
+                  default_http.DefaultStylesheetTest(): TestResult.NOT_APPLICABLE,
 
     # test mtpot
     honeypot_test('mtpot',
@@ -428,14 +441,14 @@ def main():
                       service_implementation.HTTPTest(): TestResult.NOT_APPLICABLE,
                       default_http.DefaultWebsiteTest(): TestResult.NOT_APPLICABLE,
                       default_http.DefaultGlastopfWebsiteTest(): TestResult.NOT_APPLICABLE,
-                      default_http.DefaultStylesheetTest(): TestResult.NOT_APPLICABLE,
                       default_http.CertificateValidationTest(): TestResult.NOT_APPLICABLE,
                       default_imap.DefaultIMAPBannerTest(): TestResult.NOT_APPLICABLE,
                       default_smtp.DefaultSMTPBannerTest(): TestResult.NOT_APPLICABLE,
                       service_implementation.SMTPTest(): TestResult.NOT_APPLICABLE,
                       default_telnet.DefaultTelnetBannerTest(): TestResult.WARNING,
                       old_version_bugs.KippoErrorMessageBugTest(): TestResult.NOT_APPLICABLE,
-                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE
+                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE,
+                      default_mysqlconnect.DefaultMysqlConnect():TestResut.NOT_APPLICABLE
                   })
 
     # test shockpot
@@ -455,7 +468,8 @@ def main():
                       service_implementation.SMTPTest(): TestResult.NOT_APPLICABLE,
                       default_telnet.DefaultTelnetBannerTest(): TestResult.NOT_APPLICABLE,
                       old_version_bugs.KippoErrorMessageBugTest(): TestResult.NOT_APPLICABLE,
-                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE
+                      default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE,
+                      default_mysqlconnect.DefaultMysqlConnect():TestResut.NOT_APPLICABLE
                   },
                   port_range='-')
 
@@ -463,7 +477,7 @@ def main():
     honeypot_test('mysqlhoneypotd',
                   {
                       direct_fingerprinting.DirectFingerprintTest(): TestResult.OK,
-                      direct_fingerprinting.DefaultServiceCombinationTest(): TestResult.OK,
+                      direct_fingerprinting.DefaultServiceCombinationTest(): TestResut.OK,
                       direct_fingerprinting.DuplicateServicesCheck(): TestResult.NOT_APPLICABLE
                       default_ftp.DefaultFTPBannerTest(): TestResult.NOT_APPLICABLE,
                       service_implementation.HTTPTest(): TestResult.NOT_APPLICABLE,
@@ -477,10 +491,10 @@ def main():
                       default_telnet.DefaultTelnetBannerTest(): TestResult.NOT_APPLICABLE,
                       old_version_bugs.KippoErrorMessageBugTest(): TestResult.NOT_APPLICABLE,
                       default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE,
-		      default_mysqlconnect.DefaultMysqlConnect(): TestResult.WARNING,
+                      default_mysqlconnect.DefaultMysqlConnect(): TestResult.OK,
                   })
 
-    
+
 
 
     # test the interface

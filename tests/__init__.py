@@ -8,4 +8,5 @@ __all__ = ['test',
            'default_templates',
            'direct_fingerprinting',
            'old_version_bugs',
-           'service_implementation']
+           'service_implementation',
+           'default_mysqlconnect']

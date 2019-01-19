@@ -156,7 +156,8 @@ def main(argv):
         test_list.append(old_version_bugs.KippoErrorMessageBugTest())
 
         test_list.append(default_templates.DefaultTemplateFileTest())
-
+        test_list.append(default_mysqlconnect.DefaultMysqlConnect())
+        
     if options["scan_level"] > 2:
         pass
 
