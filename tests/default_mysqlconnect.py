@@ -5,7 +5,7 @@ from mysql.connector import Error
 class DefaultMysqlConnect(Test):
 	name = "Default Mysql Connection"
 	description = "Tests for the connection of mysql server"
-	karma_value = 100
+	karma_value = 30
 
 	def run(self):
 		known_banner = "Access denied for user"
@@ -24,7 +24,7 @@ class DefaultMysqlConnect(Test):
 			if known_banner in message:
 					flag = flag + 1
 			else:
-				self.set_result(TestResult.WARNING, "No default banners")
+				self.set_result(TestResult.OK, "No default banners")
 		if flag == 10:
-			self.set_result(TestResult.OK, "Default", known_banner, "banner used")
+			self.set_result(TestResult.WARNING, "Default", known_banner, "banner used")
 			return

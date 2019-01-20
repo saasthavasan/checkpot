@@ -491,7 +491,7 @@ def main():
                       default_telnet.DefaultTelnetBannerTest(): TestResult.NOT_APPLICABLE,
                       old_version_bugs.KippoErrorMessageBugTest(): TestResult.NOT_APPLICABLE,
                       default_templates.DefaultTemplateFileTest(): TestResult.NOT_APPLICABLE,
-                      default_mysqlconnect.DefaultMysqlConnect(): TestResult.OK,
+                      default_mysqlconnect.DefaultMysqlConnect(): TestResult.WARNING,
                   })
 
 
